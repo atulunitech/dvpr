@@ -1,0 +1,352 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <title>dvpr</title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css">
+  <link rel="stylesheet" href="https://cdn.datatables.net/1.10.25/css/dataTables.bootstrap4.min.css">
+  
+  <link rel="stylesheet" href="./css/custom-style.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js"></script>
+  
+
+  <link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap" rel="stylesheet">
+
+<!-- duDatepicker -->
+<link rel="stylesheet" type="text/css" href="./css/duDatepicker.min.css">
+<link rel="stylesheet" type="text/css" href="./css/duDatepicker-theme.css">
+<!-- duDatepicker end -->
+
+</head>
+<body>
+
+<div class="jumbotron top_head d-flex justify-content-between">
+<div class="held_logo d-flex">
+    <div id="menuToggle">
+        <input type="checkbox" />
+        <span id="span1"></span>
+        <span id="span2"></span>
+        <span id="span3"></span>
+    </div>
+    <img src="./images/mahindra_logo.png">
+    <img class="dvpr_logo" src="./images/dvpr_logo.png">
+</div>
+<div class="admin_login d-flex">
+    <div class="dropdown">
+    <div class="admin_name"  data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+        Admin Name
+        
+    </div>
+    
+    
+    <!-- <div class="dropdown-menu" aria-labelledby="dropdownMenu2">
+      <button class="dropdown-item" type="button">Action</button>
+      <button class="dropdown-item" type="button">Another action</button>
+      <button class="dropdown-item" type="button">Something else here</button>
+    </div> -->
+  </div>
+  <div class="admin_icon">
+    <img src="./images/not_icon.png">
+</div>
+</div>
+</div>
+<div class="jumbotron nav_cont">
+    <nav>
+        
+        <div id="menu">
+          <a href="#" class="nav-item ">Dashboard </a>
+          <a href="#" class="nav-item nav-active">indent </a>
+          <a href="#" class="nav-item">Report </a>
+          <a href="#" class="nav-item">Analytics </a>
+          <a href="#" class="nav-item">Draft</a>
+        </div>
+      </nav>
+</div>
+  
+<div class="container">
+    <div class="row fillter_nav">
+            <div class="col-lg-6 nav_link">
+                <a href="#" class="arrow_link">
+                   <img src="./images/left_arrow.png">
+                    Home</a>
+                    <div class="nav_rout">
+                        Indent no: 234FGH543
+                    </div>
+
+            </div>
+            <div class="col-lg-6 action_click ">
+                <!-- <a href="#" class="dard_bt border_bt mr-2" data-toggle="modal" data-target="#exampleModalCenter"> popup</a> -->
+                <!-- <a href="#" class="dard_bt border_bt mr-2" > Close </a>
+                <a href="#" class="dard_bt border_bt mr-2" > Save As Draft </a> -->
+                <!-- <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#exampleModalCenter">
+                  Launch demo modal
+                </button> -->
+                <!-- <a href="#" class="dard_bt creat_bt"> Next view</a> -->
+
+               
+                    <select name="sources" id="sources" class="custom-select sources" placeholder="Change status">
+                      <option value="profile">Pending </option>
+                      <option value="word">Delivered </option>
+                      <option value="hashtag">Cancelled  </option>
+                    </select>
+                  
+            </div>
+        
+        
+    </div>
+    
+ <div class="row view_ind_wr mt-2">
+     <div class="col-md-7 deli_pad">
+        <div class="row no-gutters delivery_in_progress pdd_cus">
+            <div class="col-md-12 ">
+                <div class="view_trck_set deli_vered d-flex justify-content-between justify-content-center align-items-center">
+                    <div class="view_titl_st"> Delivered  </div>
+                <div> <a href="#" class="dard_bt edit_bt disabled cret_pdo" > Create POD</a></div>
+                </div>
+                
+            </div>
+           <div class="col-md-12">
+               <div class="prg_tit_con">From City</div>
+               <div class="prg_dec_con">Mumbai Airport (BOM), Navpada, Sahar Village, Andheri Eas…</div>
+           </div>
+           <div class="col-md-12">
+            <div class="prg_tit_con">To City</div>
+            <div class="prg_dec_con">Viman Nagar Police Station, Clover Park, Viman Nagar, Pun…</div>
+        </div>
+        <div class="col-md-4">
+            <div class="prg_tit_con">1st stop</div>
+            <div class="prg_dec_con pr_stops">Thane Railway Statio…</div>
+        </div>
+        <div class="col-md-4">
+            <div class="prg_tit_con">2st stop</div>
+            <div class="prg_dec_con pr_stops">Karjat Railway Statio…</div>
+        </div>
+        <div class="col-md-4">
+            <div class="prg_tit_con">3st stop</div>
+            <div class="prg_dec_con pr_stops">Udaipur, Rajastha…</div>
+        </div>
+        <div class="col-md-4">
+            <div class="prg_tit_con">ETA Delivery </div>
+            <div class="prg_dec_con ">12/6/2021 2:00:00 PM</div>
+        </div>
+        <div class="col-md-4">
+            <div class="prg_tit_con">Actual Arrival Date and time</div>
+            <div class="prg_dec_con ">7/6/2021 01:20</div>
+        </div>
+        <div class="col-md-4">
+            <div class="prg_tit_con">Status </div>
+            <div class="prg_dec_con out_time_ve">ontime</div>
+        </div>
+        <div class="col-md-4">
+            <div class="prg_tit_con">Buyer Name</div>
+            <div class="prg_dec_con ">Shaikh Shama Parveen</div>
+        </div>
+        <div class="col-md-4">
+            <div class="prg_tit_con">Via Cross Dock </div>
+            <div class="prg_dec_con ">Enter cross dock name</div>
+        </div>
+        </div>
+     </div>
+     <div class="col-md-5 deli_pad">
+        <div class="div_con_trck">
+        <div class="div_con_ti_s">Delivery in progress</div>
+        <div class="map_box">
+            <img src="./images/map.JPG" >
+        </div>
+       </div>
+    </div>
+ </div>
+ 
+ <div class="row view_ind_wr mt-3">
+    <div class="col-md-12 deli_pad">
+        <div class="d-flex justify-content-between align-items-start">
+            <div class="crt_pdo_ti">Create POD </div>
+            <div class="or_dw_tem">
+                
+            </div>
+                </div>
+                <div class="cr_en_con ">
+                    <div class="cr_en_con_in d-flex justify-content-between position-relative">
+                        <div class="pdo_dtl">POD Details </div>
+                        
+                    </div>
+                    <div class="cr_form_con mt-2 d-flex  position-relative">
+                        <div class="col-sm-3 cus_pad_10">
+                            <div class="cr_in_d_form ">
+                                <div class="incont">
+                                    <input type="email" id="From_City" value="" name="From City" placeholder=" ">
+                                    <label for="contactName">Unloading Date and time</label>
+                                </div>
+                             </div>
+                        </div>
+                        <div class="col-sm-2 cus_pad_10">
+                            <div class="cr_in_d_form ">
+                                <div class="incont">
+                                    <input type="email" id="From_City" value="" name="From City" placeholder=" ">
+                                    <label for="contactName">POD no</label>
+                                </div>
+                             </div>
+                        </div>
+                        <div class="col-sm-3 cus_pad_10">
+                            <div class="cr_in_d_form ">
+                                <div class="incont">
+                                    <input type="email" id="From_City" value="" name="From City" placeholder=" ">
+                                    <label for="contactName">POD Date and time</label>
+                                </div>
+                             </div>
+                        </div>
+                        <div class="col-sm-2 cus_pad_10">
+                            <div class="cr_in_d_form ">
+                                <div class="incont">
+                                    <input type="email" id="From_City" value="" name="From City" placeholder=" ">
+                                    <label for="contactName">Diff in Hrs</label>
+                                </div>
+                             </div>
+                        </div>
+                        <div class="col-sm-2 cus_pad_10">
+                            <div class="cr_in_d_form ">
+                                <div class="incont">
+                                    <input type="email" id="From_City" value="" name="From City" placeholder=" ">
+                                    <label for="contactName">Status </label>
+                                </div>
+                             </div>
+                        </div>
+                        
+                    </div>
+                    
+                    <div class="cr_form_con mt-2 d-flex  position-relative">
+                        <div class="col-sm-6 cus_pad_10">
+                            <div class="cr_in_d_form ">
+                                <div class="incont">
+                                    <input type="email" id="From_City" value="" name="From City" placeholder=" ">
+                                    <label for="contactName">Remark</label>
+                                </div>
+                             </div>
+                        </div>
+                        <div class="col-sm-6 cus_pad_10">
+                            <a href="#" class="dard_bt sub_pdo"><img src="./images/snap_icon.png"> Submit POD </a>
+                        </div>
+                        
+                        
+                    </div>
+                </div>
+        </div>
+
+        
+        </div>
+</div>
+
+
+<!-- Modal -->
+<div class="modal fade" id="exampleModalCenter" tabindex="-1" role="dialog" aria-labelledby="exampleModalCenterTitle" aria-hidden="true">
+  <div class="modal-dialog modal-dialog-centered" role="document">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title" id="exampleModalLongTitle">Modal title</h5>
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+          <span aria-hidden="true">&times;</span>
+        </button>
+      </div>
+      <div class="modal-body">
+        ...
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+        <button type="button" class="btn btn-primary">Save changes</button>
+      </div>
+    </div>
+  </div>
+</div>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"></script>
+<script src="https://cdn.datatables.net/1.10.25/js/jquery.dataTables.min.js"></script>
+<script src="https://cdn.datatables.net/1.10.25/js/dataTables.bootstrap4.min.js"></script>
+
+<script src="./js/perfect_scroll.js"></script>
+
+<!-- datepicker -->
+<script type="text/javascript" src="./js/duDatepicker.min.js"></script>
+<!-- datepicker end -->
+<script type="text/javascript">
+ 
+$( document ).ready(function() {
+
+    oTable =  $('#example').DataTable({searching: true, "bLengthChange": false,"sScrollY": "auto", info: false});
+    $('#myInputTextField').keyup(function(){
+      oTable.search($(this).val()).draw() ;
+     
+      
+});
+$('.dataTables_wrapper div.row:nth-child(2) div.col-sm-12').removeClass('col-sm-12').addClass('perfect_cus_scroll').attr("id","description");
+
+$('.dataTables_wrapper div.row:nth-child(3)').addClass("mt-3");
+$('#description').perfectScrollbar();
+
+
+});
+
+  function log (message) {
+    document.querySelector('#loggerTxt').value = message
+  }
+
+  window.onload = function () {
+    
+    // datepickers
+    // document.querySelector('.datepicker1').addEventListener('datechanged', function(e) {
+    //   console.log('New date', e.data, this.value)
+    // })
+
+    duDatepicker('.datepicker1', {
+      format: 'dd/mm/yyyy', range: true, clearBtn: true,inline: true,
+      // disabledDays: ['Sat', 'Sun'],
+      events: {
+        dateChanged: function (data) {
+          log('From: ' + data.dateFrom + '\n To: ' + data.dateTo)
+        }
+      }
+    })
+// datepickers edn
+   
+//   cust select start 
+$(".custom-select").each(function() {
+  var classes = $(this).attr("class"),
+      id      = $(this).attr("id"),
+      name    = $(this).attr("name");
+  var template =  '<div class="' + classes + '">';
+      template += '<span class="custom-select-trigger">' + $(this).attr("placeholder") + '</span>';
+      template += '<div class="custom-options">';
+      $(this).find("option").each(function() {
+        template += '<span class="custom-option ' + $(this).attr("class") + '" data-value="' + $(this).attr("value") + '">' + $(this).html() + '</span>';
+      });
+  template += '</div></div>';
+  
+  $(this).wrap('<div class="custom-select-wrapper"></div>');
+  $(this).hide();
+  $(this).after(template);
+});
+$(".custom-option:first-of-type").hover(function() {
+  $(this).parents(".custom-options").addClass("option-hover");
+}, function() {
+  $(this).parents(".custom-options").removeClass("option-hover");
+});
+$(".custom-select-trigger").on("click", function() {
+  $('html').one('click',function() {
+    $(".custom-select").removeClass("opened");
+  });
+  $(this).parents(".custom-select").toggleClass("opened");
+  event.stopPropagation();
+});
+$(".custom-option").on("click", function() {
+  $(this).parents(".custom-select-wrapper").find("select").val($(this).data("value"));
+  $(this).parents(".custom-options").find(".custom-option").removeClass("selection");
+  $(this).addClass("selection");
+  $(this).parents(".custom-select").removeClass("opened");
+  $(this).parents(".custom-select").find(".custom-select-trigger").text($(this).text());
+});
+// cust select end 
+  }
+</script>
+
+</body>
+</html>

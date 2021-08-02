@@ -117,7 +117,7 @@
     
     <div class="col-sm-12">
        
-            <table id="example" class="table custom_table">
+            <table id="myTable" class="table custom_table">
                 <thead>
                   <tr>
                     <th>Indent No.</th>
@@ -757,7 +757,7 @@
  
 $( document ).ready(function() {
 
-    oTable =  $('#example').DataTable({searching: true, "bLengthChange": false,"sScrollY": "auto", info: false});
+    oTable =  $('#myTable').DataTable({searching: true, "bLengthChange": false,"sScrollY": "auto", info: false});
     $('#myInputTextField').keyup(function(){
       oTable.search($(this).val()).draw() ;
      
