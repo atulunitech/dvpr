@@ -5,6 +5,12 @@
   margin: 0;
   padding: 0;
 }
+select {
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    text-indent: 1px;
+    text-overflow: '';
+}
 body{background-color:#f6f7fa;font-family: 'Roboto', sans-serif;font-size: 0.875rem;}
 .cus_pad_10
 {
@@ -604,6 +610,23 @@ nav {
           right: 0;
           background-color: #fff;
       }
+      .dataTables_scrollHeadInner
+      {
+          width: 100% !important;
+      }
+      div.dataTables_scrollHead table.dataTable
+      {
+          width: 100% !important;
+          margin-top: 0px !important;
+      }
+      table.dataTable tr th.select-checkbox.selected::after {
+        content: "✔";
+        margin-top: -11px;
+        margin-left: -4px;
+        text-align: center;
+        text-shadow: rgb(176, 190, 217) 1px 1px, rgb(176, 190, 217) -1px -1px, rgb(176, 190, 217) 1px -1px, rgb(176, 190, 217) -1px 1px;
+    }
+    
       /* e */
 
 
@@ -747,6 +770,12 @@ nav {
     padding-left: 40px;
     font-weight: 500;
   }
+  .nav-progress > div.check_done {
+   background-image: url(../images/check_icon.png);
+   background-repeat: no-repeat;
+    background-position: right;
+    background-size: 12px;
+  }
   .nav-progress > div.complete {
     background-color: #0969e2;
     color: #FFF;
@@ -781,7 +810,7 @@ nav {
     width: 50px;
     height: 50px;
     border: 2px solid #e8e8e8;
-    background: transparent;
+    background: #fff;
     -webkit-border-radius: 0px;
     -moz-border-radius: 0px;
     border-radius: 0px;
@@ -854,6 +883,10 @@ nav {
     background-color: #fafafa;
     border-radius: 4px;
   }
+  .cr_in_d_form > div.incont.bg_white
+  {
+      background-color: #fff;
+  }
   .cr_in_d_form > div.incont input,
   .cr_in_d_form > div.incont select,
   .cr_in_d_form > div.incont textarea {
@@ -879,6 +912,11 @@ nav {
     z-index: 9;
     position: relative;
     background: transparent;
+    padding-left: 8px;
+    background-image: url(../images/arrow_down.png);
+    background-repeat: no-repeat;
+    background-size: 14px;
+    background-position: right 15px bottom 15px;
   }
   .cr_in_d_form > div.incont textarea {
     height: 120px;
@@ -1277,3 +1315,85 @@ nav {
     font-weight: 900;
     font-size: 0.90rem;
 }
+
+/* Allocate vehicle s*/
+.all_vh_til
+{
+    border: solid 1px rgba(0, 0, 0, 0.05);
+    padding: 5px 10px 5px 10px;
+}
+.sel_vh_typ
+{
+    font-size: 1rem;
+    font-weight: 600;
+    color: #030303;
+    padding-left: 15px;
+}
+.grs_track
+{
+    display: inline-block;
+    cursor: pointer;
+}
+.grs_track img
+{
+    width: 16px;
+}
+.lc_vh_tooltip
+{
+    width: 150px;
+    padding: 12px;
+}
+.lc_tool_box
+{
+    border-bottom:1px solid rgba(255, 255, 255, 0.2);
+    margin-bottom: 5px;
+}
+.lc_tool_box:last-child
+{
+    border: none;
+}
+.lc_tool_box p
+{
+    color: rgba(255, 255, 255, 0.6);
+    font-size: 0.65rem;
+    font-weight: 500;
+    margin-bottom: 0px;
+}
+.lc_tool_box h4
+{
+    color: rgba(255, 255, 255, 9);
+    font-size: 0.85rem;
+    font-weight: 600;
+    margin-bottom: 5px;
+}
+.lc_tool_box h4.activ_gp
+{
+    color: #19d620;
+    background-image: url(../images/gprs_active.png);
+    background-size: 12px;
+    background-repeat: no-repeat;
+    background-position: left center;
+    padding-left: 14px;
+}
+/* Allocate vehicle e*/
+
+
+/* tooltip s*/
+.tippy-tooltip.custom-theme {
+    background-color: #0a0d46;
+    color: #fff;
+    box-shadow: 0px 2px 4px 0px rgba(0, 0, 0, 0.1);
+  }
+  .tippy-tooltip.custom-theme[data-placement^=top] .tippy-arrow {
+    border-top-color: #0a0d46;
+  }
+  .tippy-tooltip.custom-theme[data-placement^=bottom] .tippy-arrow {
+    border-bottom-color: #0a0d46;
+  }
+  .tippy-tooltip.custom-theme[data-placement^=left] .tippy-arrow {
+    border-left-color: white;
+  }
+  .tippy-tooltip.custom-theme[data-placement^=right] .tippy-arrow {
+    border-right-color: white;
+  }
+ /* tooltip e */

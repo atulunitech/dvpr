@@ -1,0 +1,349 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <title>dvpr</title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css">
+  <link rel="stylesheet" href="https://cdn.datatables.net/1.10.25/css/dataTables.bootstrap4.min.css">
+  <link rel="stylesheet" href="https://gyrocode.github.io/jquery-datatables-checkboxes/1.2.12/css/dataTables.checkboxes.css">
+ 
+  
+  <link rel="stylesheet" href="./css/custom-style.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js"></script>
+
+
+  
+
+  <link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap" rel="stylesheet">
+
+<!-- duDatepicker -->
+<link rel="stylesheet" type="text/css" href="./css/duDatepicker.min.css">
+<link rel="stylesheet" type="text/css" href="./css/duDatepicker-theme.css">
+<!-- duDatepicker end -->
+
+</head>
+<body>
+
+<div class="jumbotron top_head d-flex justify-content-between">
+<div class="held_logo d-flex">
+    <div id="menuToggle">
+        <input type="checkbox" />
+        <span id="span1"></span>
+        <span id="span2"></span>
+        <span id="span3"></span>
+    </div>
+    <img src="./images/mahindra_logo.png">
+    <img class="dvpr_logo" src="./images/dvpr_logo.png">
+</div>
+<div class="admin_login d-flex">
+    <div class="dropdown">
+    <div class="admin_name"  data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+        Admin Name
+        
+    </div>
+    
+    
+    <!-- <div class="dropdown-menu" aria-labelledby="dropdownMenu2">
+      <button class="dropdown-item" type="button">Action</button>
+      <button class="dropdown-item" type="button">Another action</button>
+      <button class="dropdown-item" type="button">Something else here</button>
+    </div> -->
+  </div>
+  <div class="admin_icon">
+    <img src="./images/not_icon.png">
+</div>
+</div>
+</div>
+<div class="jumbotron nav_cont">
+    <nav>
+        
+        <div id="menu">
+          <a href="#" class="nav-item ">Dashboard </a>
+          <a href="#" class="nav-item nav-active">indent </a>
+          <a href="#" class="nav-item">Report </a>
+          <a href="#" class="nav-item">Analytics </a>
+          <a href="#" class="nav-item">Draft</a>
+        </div>
+      </nav>
+</div>
+  
+<div class="container">
+    <div class="row fillter_nav">
+            <div class="col-lg-6 nav_link">
+                <a href="#" class="arrow_link">
+                   <img src="./images/left_arrow.png">
+                    Home</a>
+                    <div class="nav_rout">
+                        Create Indent
+                    </div>
+
+            </div>
+            <div class="col-lg-6 action_click ">
+                <!-- <a href="#" class="dard_bt border_bt mr-2" data-toggle="modal" data-target="#exampleModalCenter"> popup</a> -->
+                <a href="#" class="dard_bt border_bt mr-2" > Close </a>
+                <a href="#" class="dard_bt border_bt mr-2" > Save As Draft </a>
+                <!-- <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#exampleModalCenter">
+                  Launch demo modal
+                </button> -->
+                <a href="#" class="dard_bt creat_bt"> Next view</a>
+            </div>
+        
+        
+    </div>
+    
+  <div class="row">
+    
+    <div class="col-sm-12">
+        <div class="nav-progress">
+            <div class="check_done">
+                Indent Details
+            <div class="arrow-wrapper">
+              <div class="arrow-cover">
+                <div class="arrow"></div>
+              </div>
+            </div>
+            </div>
+            <div class="complete">
+                Allocate vehicle 
+            <div class="arrow-wrapper">
+              <div class="arrow-cover">
+                <div class="arrow"></div>
+              </div>
+            </div>
+            </div>
+            <div>
+                Delivery Invoice Details
+            <div class="arrow-wrapper">
+              <div class="arrow-cover">
+                <div class="arrow"></div>
+              </div>
+            </div>
+            </div>
+            <!-- <div>
+                Step 4
+            </div> -->
+        </div>
+          
+       
+        
+    </div>
+    
+  </div>
+  <div class="row mt-3">
+    <div class="col-lg-12 ">
+      <div class="all_vh_til d-flex justify-content-between align-items-center">
+          <div class="sel_vh_typ">
+            Select Vehicle Type 
+          </div>
+          <div class="col-lg-2 pl-0 pr-0">
+            <div class="cr_in_d_form ">
+                <div class="incont mb-0 bg_white">
+                    <select  onclick="this.setAttribute('value', this.value);" value="">
+                        <option value=""></option>
+                        <option value="1">test</option>
+                        <option value="2">test</option>
+                       
+                      </select>
+                    <label for="contactName">Vehicle Type</label>
+                </div>
+             </div>
+        </div>
+      </div>
+    </div>
+    
+</div>
+<div class="row">
+    
+    <div class="col-sm-12">
+       
+            <table id="myTable" class="table custom_table " >
+                <thead>
+                  <tr>
+                    <th></th>
+                    <th>BA Name</th>
+                    <th>Vehicle Details</th>
+                    <th>GPS</th>
+                    <th>BA Contact  </th>
+                    <th>Passing Tonage </th>
+                    <th>Lanes  </th>
+                    <th>ETA </th>
+                    <th >Rate (TON/₹)</th>
+                  </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td></td>
+                        <td>Ram Naresh</td>
+                        <td>TAKSHI AUTO 
+                            COMPONENTS P</td>
+                        <td><div class="grs_track" title="<div class='lc_vh_tooltip'>
+                            <div class='lc_tool_box mb-2'>
+                                <p>GPS Status </p>
+                                <h4 class='activ_gp'>Active</h4>
+                            </div>
+                            <div class='lc_tool_box mb-2'>
+                                <p>GPS Type </p>
+                                <h4>GPS Type</h4>
+                            </div>
+                            <div class='lc_tool_box '>
+                                <p>GPS Vendor </p>
+                                <h4>GPS Vendor</h4>
+                            </div>
+                            
+                        </div>"><img src="./images/gprs_active.png"></div></td>
+                        <td>+91 0000 00 0000</td>
+                        <td>130 tonnes </td>
+                        <td>Mumbai -> Pune</td>
+                        <td>2 Day 12hrs</td>
+                        <td>123,34.00</td>
+                      </tr>
+                  <tr>
+                    <td></td>
+                    <td>Ram Naresh</td>
+                    <td>TAKSHI AUTO 
+                        COMPONENTS P</td>
+                    <td>
+                        <div class="grs_track" ><img src="./images/gprs_non_active.png"></div>
+                    </td>
+                    <td>+91 0000 00 0000</td>
+                    <td>130 tonnes </td>
+                    <td>Mumbai -> Pune</td>
+                    <td>2 Day 12hrs</td>
+                    <td>123,34.00</td>
+                  </tr>
+                  
+                </tbody>
+              </table>
+       
+        
+    </div>
+    
+  </div>
+</div>
+
+<!-- Modal -->
+<div class="modal fade" id="exampleModalCenter" tabindex="-1" role="dialog" aria-labelledby="exampleModalCenterTitle" aria-hidden="true">
+  <div class="modal-dialog modal-dialog-centered" role="document">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title" id="exampleModalLongTitle">Modal title</h5>
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+          <span aria-hidden="true">&times;</span>
+        </button>
+      </div>
+      <div class="modal-body">
+        ...
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+        <button type="button" class="btn btn-primary">Save changes</button>
+      </div>
+    </div>
+  </div>
+</div>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"></script>
+<script src="https://cdn.datatables.net/1.10.25/js/jquery.dataTables.min.js"></script>
+<script src="https://cdn.datatables.net/1.10.25/js/dataTables.bootstrap4.min.js"></script>
+
+
+<script src="https://gyrocode.github.io/jquery-datatables-checkboxes/1.2.12/js/dataTables.checkboxes.min.js"></script>
+
+<script src="https://unpkg.com/tippy.js@5"></script>
+
+<script src="./js/perfect_scroll.js"></script>
+
+<!-- datepicker -->
+<script type="text/javascript" src="./js/duDatepicker.min.js"></script>
+<!-- datepicker end -->
+<script type="text/javascript">
+ 
+$( document ).ready(function() {
+
+    oTable =  $('#myTable').DataTable({searching: true, "bLengthChange": false,"bSort": false, "sScrollY": "auto", info: false,
+    columnDefs: [
+         {
+            'targets': 0,
+            'checkboxes': {
+               'selectRow': true
+            }
+         }
+      ],
+      select: {
+         'style': 'multi'
+      },
+      order: [[1, 'asc']]
+    });
+    $('#MyTableCheckAllButton').click(function() {
+        if (myTable.rows({
+                selected: true
+            }).count() > 0) {
+            myTable.rows().deselect();
+            return;
+        }
+
+        myTable.rows().select();
+    });
+
+    $('#myInputTextField').keyup(function(){
+      oTable.search($(this).val()).draw() ;
+     
+      
+});
+$('.dataTables_wrapper div.row:nth-child(2) div.col-sm-12').removeClass('col-sm-12').addClass('perfect_cus_scroll').attr("id","description");
+
+$('.dataTables_wrapper div.row:nth-child(3)').addClass("mt-3");
+$('#description').perfectScrollbar();
+
+
+});
+
+  function log (message) {
+    document.querySelector('#loggerTxt').value = message
+  }
+
+  window.onload = function () {
+    
+    // datepickers
+    // document.querySelector('.datepicker1').addEventListener('datechanged', function(e) {
+    //   console.log('New date', e.data, this.value)
+    // })
+
+    duDatepicker('.datepicker1', {
+      format: 'dd/mm/yyyy', range: true, clearBtn: true,inline: true,
+      // disabledDays: ['Sat', 'Sun'],
+      events: {
+        dateChanged: function (data) {
+          log('From: ' + data.dateFrom + '\n To: ' + data.dateTo)
+        }
+      }
+    })
+// datepickers edn
+   
+tippy('[title]', {		
+				// change these to your liking
+				arrow: true,
+				placement: 'top', // top, right, bottom, left
+				delay: 5, //ms
+				distance: 15, //px or string
+				maxWidth: 300, //px or string
+			
+				// leave these as they are
+				followCursor: true,
+				allowHTML: true,
+        theme: 'custom',
+				ignoreAttributes: true,
+        content(reference) {
+            const title = reference.getAttribute('title');
+            reference.removeAttribute('title');
+            return title;
+        },
+    });
+    // s
+    // e
+  }
+</script>
+
+</body>
+</html>
