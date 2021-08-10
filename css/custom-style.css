@@ -629,6 +629,31 @@ nav {
     
       /* e */
 
+      /* s */
+      div.dataTables_wrapper div.dataTables_paginate ul.pagination
+      {
+        font-weight: 500;
+    font-size: 12px;
+      }
+      .page-item:first-child .page-link
+      {
+        color: #000000 !important;
+      }
+      .page-link
+      {
+        color: #000000 !important;
+      }
+      .page-link:hover
+      {
+        color: #000000 !important;
+      }
+      .page-item.active .page-link
+      {
+        color: #fff !important;
+        background-color: #2258bf;
+      }
+      
+      /* e */
 
       .ind_no
       {
@@ -743,6 +768,116 @@ nav {
   
 /*e*/
 
+
+/*s*/
+/*basic styling */
+.sort_by_form {
+  text-align: center;
+  margin: auto;
+  box-sizing: border-box;
+  width: 100%;
+  display: block;
+  background-image: url(../images/arrow_down.png);
+  background-repeat: no-repeat;
+  background-position: right 10px center;
+  background-size: 14px;
+}
+.sort_by_form > div.incont {
+  position: relative;
+  width: 100%;
+  box-sizing: border-box;
+  display: block;
+  /* margin-bottom: 20px; */
+}
+.sort_by_form > div.incont input,
+.sort_by_form > div.incont select,
+.sort_by_form > div.incont textarea {
+  width: 100%;
+  /* margin: 10px; */
+  border: none;
+  border: 1px solid rgb(246, 247, 250);
+  padding: 0px 8px;
+  transition: all .3s ease;
+  outline: none !important;
+  border-radius: 4px;
+  font-weight: 400;
+  padding-top: 15px;
+ 
+}
+.sort_by_form > div.incont input {
+  height: 42px;
+  position: relative;
+  z-index: 9;
+  background: transparent;
+}
+.sort_by_form > div.incont select {
+  height: 42px;
+  z-index: 9;
+  position: relative;
+  background: transparent;
+  padding-left: 40px;
+  background-image: url(../images/sortbyfillter.png);
+  background-repeat: no-repeat;
+  background-position: left 10px center;
+  background-size: 20px;
+}
+.sort_by_form > div.incont textarea {
+  height: 120px;
+  padding-top: 20px;
+}
+.sort_by_form > div.incont label {
+  position: absolute;
+  top: 0;
+  left: 0;
+  margin: 12px;
+  transition: all .3s ease;
+  font-weight: 300;
+  margin-left: 40px;
+  padding-left: 0px;
+  z-index: -0;
+}
+.sort_by_form > div.incont input:focus {
+  border-color: #ff6291;
+}
+.sort_by_form > div.incont input:not(:placeholder-shown),
+.sort_by_form > div.incont select:not([value=""]),
+.sort_by_form > div.incont textarea:not(:placeholder-shown) {
+  border-color: rgba(0, 0, 0, 0.09);
+}
+
+
+.sort_by_form > div.incont input:focus ~ label,
+.sort_by_form > div.incont input:not(:placeholder-shown) ~ label,
+.sort_by_form > div.incont select:not([value=""]):valid ~ label,
+.sort_by_form > div.incont textarea:focus ~ label,
+.sort_by_form > div.incont textarea:not(:placeholder-shown) ~ label{
+  font-size: 12px;
+  -ms-transform: translateY(-21px);
+  -webkit-transform: translateY(-21px);
+  -moz-transform: translateY(-21px);
+  -o-transform: translateY(-21px);
+  transform: translateY(-8px);
+  background-color: transparent;
+  padding-left: 0px;
+  padding-right: 0px;
+  z-index: 9;
+}
+
+/* label color on focused state */
+.sort_by_form > div.incont input:focus ~ label,
+.sort_by_form > div.incont select:focus ~ label,
+.sort_by_form > div.incont textarea:focus ~ label{
+  color: #ff6291;
+}
+
+/* label color on filled state */
+.sort_by_form > div.incont input:not(:placeholder-shown) ~ label,
+.sort_by_form > div.incont select:not([value=""]):valid ~ label,
+.sort_by_form > div.incont textarea:not(:placeholder-shown) ~ label{
+  color: rgba(0, 0, 0, 9);
+}
+
+/*e*/
 /* E */
 
 /* s */
@@ -850,6 +985,11 @@ nav {
     color: #30e221;
     font-size: 1.0500rem;
     font-weight: 900;
+}
+.eta_no.color_red
+{
+  color: #e22121;
+  
 }
 
 /* s */
@@ -1397,3 +1537,31 @@ nav {
     border-right-color: white;
   }
  /* tooltip e */
+
+
+/* s */
+ .oth_sugg_cons
+ {
+  background: #fff;
+  padding: 20px !important;
+  font-size: 0.90rem;
+  font-weight: bold;
+  text-decoration: none;
+  color: #0969e2;
+ }
+ .oth_sugg_cons a
+ {
+  color: #0969e2;
+ }
+ .oth_sugg_cons a:hover
+ {
+   text-decoration: none;
+   color: #0969e2 ;
+ }
+.oth_title
+{
+  color: #272d3b;
+  font-size: 1.2rem;
+  font-weight: 700;
+}
+ /* e */

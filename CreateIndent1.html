@@ -1,0 +1,370 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <title>dvpr</title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css">
+  <link rel="stylesheet" href="https://cdn.datatables.net/1.10.25/css/dataTables.bootstrap4.min.css">
+  
+  <link rel="stylesheet" href="./css/custom-style.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js"></script>
+  
+
+  <link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap" rel="stylesheet">
+
+<!-- duDatepicker -->
+<link rel="stylesheet" type="text/css" href="./css/duDatepicker.min.css">
+<link rel="stylesheet" type="text/css" href="./css/duDatepicker-theme.css">
+<!-- duDatepicker end -->
+
+</head>
+<body>
+
+<div class="jumbotron top_head d-flex justify-content-between">
+<div class="held_logo d-flex">
+    <div id="menuToggle">
+        <input type="checkbox" />
+        <span id="span1"></span>
+        <span id="span2"></span>
+        <span id="span3"></span>
+    </div>
+    <img src="./images/mahindra_logo.png">
+    <img class="dvpr_logo" src="./images/dvpr_logo.png">
+</div>
+<div class="admin_login d-flex">
+    <div class="dropdown">
+    <div class="admin_name"  data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+        Admin Name
+        
+    </div>
+    
+    
+    <!-- <div class="dropdown-menu" aria-labelledby="dropdownMenu2">
+      <button class="dropdown-item" type="button">Action</button>
+      <button class="dropdown-item" type="button">Another action</button>
+      <button class="dropdown-item" type="button">Something else here</button>
+    </div> -->
+  </div>
+  <div class="admin_icon">
+    <img src="./images/not_icon.png">
+</div>
+</div>
+</div>
+<div class="jumbotron nav_cont">
+    <nav>
+        
+        <div id="menu">
+          <a href="#" class="nav-item ">Dashboard </a>
+          <a href="#" class="nav-item nav-active">indent </a>
+          <a href="#" class="nav-item">Report </a>
+          <a href="#" class="nav-item">Analytics </a>
+          <a href="#" class="nav-item">Draft</a>
+        </div>
+      </nav>
+</div>
+  
+<div class="container">
+    <div class="row fillter_nav">
+            <div class="col-lg-6 nav_link">
+                <a href="#" class="arrow_link">
+                   <img src="./images/left_arrow.png">
+                    Home</a>
+                    <div class="nav_rout">
+                        Create Indent
+                    </div>
+
+            </div>
+            <div class="col-lg-6 action_click ">
+                <!-- <a href="#" class="dard_bt border_bt mr-2" data-toggle="modal" data-target="#exampleModalCenter"> popup</a> -->
+                <a href="#" class="dard_bt border_bt mr-2" > Close </a>
+                <a href="#" class="dard_bt border_bt mr-2" > Save As Draft </a>
+                <!-- <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#exampleModalCenter">
+                  Launch demo modal
+                </button> -->
+                <a href="#" class="dard_bt creat_bt"> Next view</a>
+            </div>
+        
+        
+    </div>
+    
+  <div class="row">
+    
+    <div class="col-sm-12">
+        <div class="nav-progress">
+            <div class="complete">
+                Indent Details
+            <div class="arrow-wrapper">
+              <div class="arrow-cover">
+                <div class="arrow"></div>
+              </div>
+            </div>
+            </div>
+            <div >
+                Allocate vehicle 
+            <div class="arrow-wrapper">
+              <div class="arrow-cover">
+                <div class="arrow"></div>
+              </div>
+            </div>
+            </div>
+            <div>
+                Delivery Invoice Details
+            <div class="arrow-wrapper">
+              <div class="arrow-cover">
+                <div class="arrow"></div>
+              </div>
+            </div>
+            </div>
+            <!-- <div>
+                Step 4
+            </div> -->
+        </div>
+          
+       
+        
+    </div>
+    
+  </div>
+  <div class="row mt-3">
+      <div class="col-sm-12">
+<div class="cr_en_con ">
+    <div class="cr_en_con_in d-flex justify-content-between position-relative">
+        <div class="indent_no">Indent no: 234FGH543</div>
+        <div class="eta_no color_red" >ETA: 85hrs and 23min</div>
+    </div>
+    <div class="cr_form_con mt-2 d-flex justify-content-between position-relative">
+        <div class="col-sm-5 cus_pad_10">
+            <div class="cr_in_d_form ">
+                <div class="incont">
+                    <input type="email" id="From_City" value="" name="From City" placeholder=" ">
+                    <label for="contactName">From City</label>
+                </div>
+             </div>
+        </div>
+        <div class="col-sm-5 cus_pad_10">
+            <div class="cr_in_d_form ">
+                <div class="incont">
+                    <input type="email" id="To_City" value="" name="To City" placeholder=" ">
+                    <label for="contactName">To City</label>
+                </div>
+             </div>
+        </div>
+        <div class="col-sm-2 cus_pad_10">
+            <div class="cr_in_d_form ">
+                <div class="incont">
+                    <input type="number" id="To_City" value="" name="To City" placeholder=" ">
+                    <label for="contactName">Stop No</label>
+                </div>
+             </div>
+        </div>
+    </div>
+    
+    <div class="cr_form_con  d-flex justify-content-between position-relative">
+        <div class="col-sm-3 cus_pad_10">
+            <div class="cr_in_d_form ">
+                <div class="incont">
+                    <input type="email" id="From_City" value="" name="From City" placeholder=" ">
+                    <label for="contactName">1st stop</label>
+                </div>
+             </div>
+        </div>
+        <div class="col-sm-3 cus_pad_10">
+            <div class="cr_in_d_form ">
+                <div class="incont">
+                    <input type="email" id="To_City" value="" name="To City" placeholder=" ">
+                    <label for="contactName">2st stop</label>
+                </div>
+             </div>
+        </div>
+        <div class="col-sm-3 cus_pad_10">
+            <div class="cr_in_d_form ">
+                <div class="incont">
+                    <input type="text" id="To_City" value="" name="To City" placeholder=" ">
+                    <label for="contactName">3st stop</label>
+                </div>
+             </div>
+        </div>
+        <div class="col-sm-3 cus_pad_10">
+            <div class="cr_in_d_form ">
+                <div class="incont">
+                    <input type="text" id="To_City" value="" name="To City" placeholder=" ">
+                    <label for="contactName">4st stop</label>
+                </div>
+             </div>
+        </div>
+        
+    </div>
+</div>
+<div class="cr_en_con cross_dock">
+    
+    <div class="cr_form_con mt-2 d-flex  position-relative">
+        <div class="col-sm-2 cus_pad_10 pr-0">
+            <div class="pt-3">
+                <input class="styled-checkbox" id="styled-checkbox-2" type="checkbox" value="value2" checked>
+            <label for="styled-checkbox-2">Cross Dock pick up</label>
+            </div>
+            
+        </div>
+        <div class="col-sm-3 cus_pad_10">
+            <div class="cr_in_d_form ">
+                <div class="incont">
+                    <input type="text" id="Indent Received On" value="" name="Indent Received On" placeholder=" ">
+                    <label for="contactName">Indent Received On</label>
+                </div>
+             </div>
+        </div>
+        <div class="col-sm-5 cus_pad_10">
+            <div class="cr_in_d_form ">
+                <div class="incont">
+                    <input type="text" id="Buyer Name" value="" name="Buyer Name" placeholder=" ">
+                    <label for="contactName">Buyer Name</label>
+                </div>
+             </div>
+        </div>
+    </div>
+    
+</div>
+<div class="cr_en_con order_details mt-3">
+  
+    <div class="d-flex justify-content-between align-items-start">
+<div class="order_det_titl">Order Details </div>
+<div class="or_dw_tem">
+    <a href="#" class="dard_bt border_bt dw_tem_bt mr-2"> Download templet </a>
+    <a href="#" class="dard_bt up_tem_bt "> Upload order details </a>
+</div>
+    </div>
+  <div class="order_det_list">
+      <div class="cr_form_con mt-1 d-flex">
+        <div class="col-md-11 pr-1 cr_form_con_5 d-flex cus_pad_10">
+            <div class="cr_in_d_form cus_pad_5">
+                <div class="incont">
+                    <input type="email" id="To_City" value="" name="To City" placeholder=" ">
+                    <label for="contactName">Type of package </label>
+                </div>
+             </div>
+             <div class="cr_in_d_form cus_pad_5">
+                <div class="incont">
+                    <input type="email" id="To_City" value="" name="To City" placeholder=" ">
+                    <label for="contactName">Weight (in kg)</label>
+                </div>
+             </div>
+             <div class="cr_in_d_form cus_pad_5">
+                <div class="incont">
+                    <input type="email" id="To_City" value="" name="To City" placeholder=" ">
+                    <label for="contactName">Quantity </label>
+                </div>
+             </div>
+             <div class="cr_in_d_form cus_pad_5">
+                <div class="incont">
+                    <input type="email" id="To_City" value="" name="To City" placeholder=" ">
+                    <label for="contactName">Number of package </label>
+                </div>
+             </div>
+             <div class="cr_in_d_form cus_pad_5">
+                <div class="incont">
+                    <input type="email" id="To_City" value="" name="To City" placeholder=" ">
+                    <label for="contactName">ASN</label>
+                </div>
+             </div>
+             <div class="cr_in_d_form cus_pad_5">
+                <div class="incont">
+                    <input type="email" id="To_City" value="" name="To City" placeholder=" ">
+                    <label for="contactName">Part Number </label>
+                </div>
+             </div>
+             <div class="cr_in_d_form cus_pad_5">
+                <div class="incont">
+                    <input type="email" id="To_City" value="" name="To City" placeholder=" ">
+                    <label for="contactName">Part Description </label>
+                </div>
+             </div>
+        </div>
+          <div class="col-md-1 action_cont cus_pad_10">
+              <a href="#"><img src="./images/delet_de_icon.png"></a>
+              <a href="#"><img src="./images/add_de_icon.png"></a>
+          </div>
+      </div>
+  </div>
+    
+</div>
+      </div>
+  </div>
+</div>
+
+<!-- Modal -->
+<div class="modal fade" id="exampleModalCenter" tabindex="-1" role="dialog" aria-labelledby="exampleModalCenterTitle" aria-hidden="true">
+  <div class="modal-dialog modal-dialog-centered" role="document">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title" id="exampleModalLongTitle">Modal title</h5>
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+          <span aria-hidden="true">&times;</span>
+        </button>
+      </div>
+      <div class="modal-body">
+        ...
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+        <button type="button" class="btn btn-primary">Save changes</button>
+      </div>
+    </div>
+  </div>
+</div>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"></script>
+<script src="https://cdn.datatables.net/1.10.25/js/jquery.dataTables.min.js"></script>
+<script src="https://cdn.datatables.net/1.10.25/js/dataTables.bootstrap4.min.js"></script>
+
+<script src="./js/perfect_scroll.js"></script>
+
+<!-- datepicker -->
+<script type="text/javascript" src="./js/duDatepicker.min.js"></script>
+<!-- datepicker end -->
+<script type="text/javascript">
+ 
+$( document ).ready(function() {
+
+    oTable =  $('#example').DataTable({searching: true, "bLengthChange": false,"sScrollY": "auto", info: false});
+    $('#myInputTextField').keyup(function(){
+      oTable.search($(this).val()).draw() ;
+     
+      
+});
+$('.dataTables_wrapper div.row:nth-child(2) div.col-sm-12').removeClass('col-sm-12').addClass('perfect_cus_scroll').attr("id","description");
+
+$('.dataTables_wrapper div.row:nth-child(3)').addClass("mt-3");
+$('#description').perfectScrollbar();
+
+
+});
+
+  function log (message) {
+    document.querySelector('#loggerTxt').value = message
+  }
+
+  window.onload = function () {
+    
+    // datepickers
+    // document.querySelector('.datepicker1').addEventListener('datechanged', function(e) {
+    //   console.log('New date', e.data, this.value)
+    // })
+
+    duDatepicker('.datepicker1', {
+      format: 'dd/mm/yyyy', range: true, clearBtn: true,inline: true,
+      // disabledDays: ['Sat', 'Sun'],
+      events: {
+        dateChanged: function (data) {
+          log('From: ' + data.dateFrom + '\n To: ' + data.dateTo)
+        }
+      }
+    })
+// datepickers edn
+   
+    
+  }
+</script>
+
+</body>
+</html>
