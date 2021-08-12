@@ -304,7 +304,7 @@
  
 $( document ).ready(function() {
 
-    oTable =  $('#myTable').DataTable({searching: true, "bLengthChange": false, info: false, });
+    oTable =  $('#myTable').DataTable({searching: true, "bLengthChange": false, info: false,scrollY:"auto" });
     $('#myInputTextField').keyup(function(){
       oTable.search($(this).val()).draw() ;
      
