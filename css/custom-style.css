@@ -579,6 +579,7 @@ nav {
       {
           margin-bottom: 0px;
           /* min-width: 1200px; */
+          background-color: #fff;
       }
       .custom_table thead th
       {
@@ -1159,12 +1160,13 @@ nav {
     vertical-align: top;
     width: 20px;
     height: 20px;
-    background: white;
+    background: #eaeaea;
   }
   
-  .styled-checkbox:focus + label:before {
+  /* .styled-checkbox:focus + label:before {
     box-shadow: 0 0 0 3px rgba(0, 0, 0, 0.12);
-  }
+  } */
+  
   .styled-checkbox:checked + label:before {
     background: #1069e2;
   }
@@ -1230,6 +1232,20 @@ nav {
     padding-left: 0;
     text-align: right;
     padding-top: 4px;
+}
+.action_cont.oth_sugges
+{
+  display: flex;
+  justify-content: flex-end;
+  align-items: end;
+}
+.action_cont.oth_sugges a
+{
+  margin-left: 5px;
+}
+.action_cont.oth_sugges a img
+{
+  width: 30px;
 }
 .action_cont a{display: inline-block;}
 .action_cont a img{width: 40px;}
