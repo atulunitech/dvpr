@@ -1226,6 +1226,66 @@ nav {
     margin-top: 5px;
     padding:15px 15px 0 15px;
 }
+.order_det_list.Club_1
+{
+  background-color: #B0E0E6;
+}
+.order_det_list.Club_2
+{
+  background-color: #ADD8E6;
+}
+.order_det_list.Club_3
+{
+  background-color: #87CEFA;
+}
+.order_det_list.Club_4
+{
+  background-color: #87CEEB;
+}
+.order_det_list.Club_5
+{
+  background-color: #00BFFF;
+}
+.order_det_list.Club_6
+{
+  background-color: #B0C4DE;
+}
+.order_det_list.Club_7
+{
+  background-color: #1E90FF;
+}
+.order_det_list.Club_8
+{
+  background-color: #6495ED;
+}
+.order_det_list.Club_9
+{
+  background-color: #4682B4;
+}
+.order_det_list.Club_10
+{
+  background-color: #4169E1;
+}
+.order_det_list.Club_11
+{
+  background-color: #0000FF;
+}
+.order_det_list.Club_12
+{
+  background-color: #0000CD;
+}
+.order_det_list.Club_13
+{
+  background-color: #00008B;
+}
+.order_det_list.Club_14
+{
+  background-color: #000080;
+}
+.order_det_list.Club_15
+{
+  background-color: #191970;
+}
 .action_cont
 {
     padding-right: 0px;
