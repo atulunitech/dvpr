@@ -595,7 +595,7 @@ nav {
       {
         position:sticky;
           right: 0;
-          min-width: 200px;
+          min-width: 129px;
           background-color: #fff;
       }
       .custom_table td
@@ -1531,7 +1531,21 @@ nav {
     height: 320px;
 }
 /* e */
-
+.collapse.show
+{
+  background-color: #e4e4e4;
+  padding-top: 20px;
+  padding-left: 15px;
+    padding-right: 15px;
+}
+.show_actions_con
+{
+  margin-left: -15px;
+    margin-right: -15px;
+    background-color: white;
+    padding-top: 10px;
+    padding-bottom: 10px;
+}
 .crt_pdo_ti
 {
     color: #272d3b;
